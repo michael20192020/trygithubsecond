@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText nameEditText;
     private Button submitButton;
     private Button clearButton;
-    private String name;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.submitButton);
         nameEditText = findViewById(R.id.nameEditText);
         submitButton.setOnClickListener(v -> {
-            
-            name = nameEditText.getText().toString().trim();
+            String name = nameEditText.getText().toString().trim();
             if (name.equals(""))
             {
                 nameEditText.setError("name is empty");
